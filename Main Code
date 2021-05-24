@@ -1,0 +1,105 @@
+import random
+
+
+def main():
+    welcome_script()
+
+def welcome_script():
+    print("Welcome to the game")
+    Player_name = (input("What is your name, chosen one? "))
+    print(str(Player_name) + ", were you a knight, a rogue, a merchant, a dragon warrior, a branded-- or an infant?")
+    Player_class = input("Class? ")
+    if Player_class.lower().strip() == "knight":
+        print("Memories suddenly rush back to your head. You remember now! You are one of the greatest knights "
+              "that the empire of California has ever seen!")
+        print("A wizard suddenly appears!")
+        print("")
+        print("Oh, majestic knight of California! I have finally found you! Beasts have invaded the castle of the king,"
+              " and we need you to save us! Your years of war will pay off, and you will be the most esteemed knight"
+              " of California!")
+        start_quest = (input("Will you save California (yes/no)? "))
+        if start_quest.lower().strip() == "yes":
+            print("Yay")
+        else:
+            print("Shame on you " + str(Player_name) + "! You are no knight! You are but a coward.")
+            exit()
+    elif Player_class.lower().strip() == "rogue":
+        print("Memories suddenly rush back to your head. You remember now! "
+              "Agile like the wind, you were the greatest thief the empire of California has ever seen.")
+        print("A wizard suddenly appears!")
+        print("")
+        print("Oh, majestic knight of California! I have finally found you! Beasts have invaded the castle of the king,"
+              " and we need you to save us! Your years of war will pay off, and you will be the most esteemed knight"
+              " of California!")
+        start_quest = (input("Will you save California (yes/no)? "))
+        if start_quest.lower().strip() == "yes":
+            print("Yay")
+        else:
+            print("I wasn't expecting anything else  " + str(Player_name) + "! After all, you are a thief.")
+            exit()
+    elif Player_class.lower().strip() == "merchant":
+        print("Memories suddenly rush back to your head. You remember now! "
+              "You come from a long line of merchants and you secretly rule the empire of California, manipulating the "
+              "false king to do your bidding.")
+        print("A wizard suddenly appears!")
+        print("")
+        print("Oh, majestic knight of California! I have finally found you! Beasts have invaded the castle of the king,"
+              " and we need you to save us! Your years of war will pay off, and you will be the most esteemed knight"
+              " of California!")
+        start_quest = (input("Will you save California (yes/no)? "))
+        if start_quest.lower().strip() == "yes":
+            print("Yay")
+        else:
+            print("Wow!  " + str(Player_name) + ", you are the first merchant I meet who would deny more power. "
+                                                 "What would your family think of this?")
+            exit()
+    elif Player_class.lower().strip() == "dragon warrior":
+        print("Memories suddenly rush back to your head. You remember now! "
+              "Cast out from your tribe, you are the first dragon to find the empire of California.")
+        print("A wizard suddenly appears!")
+        print("")
+        print("Oh, majestic knight of California! I have finally found you! Beasts have invaded the castle of the king,"
+              " and we need you to save us! Your years of war will pay off, and you will be the most esteemed knight"
+              " of California!")
+        start_quest = (input("Will you save California (yes/no)? "))
+        if start_quest.lower().strip() == "yes":
+            print("Yay")
+        else:
+            print("Hahahaha! " + str(Player_name) + ", this is why you were cast out of your tribe. Cowardice.")
+            exit()
+    elif Player_class.lower().strip() == "branded":
+        print("Memories suddenly rush back to your head. You remember now! "
+              "Your best friend betrayed you and branded you with the mark of demons. "
+              "You've been hiding in California for months now, but they've finally found you.")
+        print("A wizard suddenly appears!")
+        print("")
+        print("Oh, majestic knight of California! I have finally found you! Beasts have invaded the castle of the king,"
+              " and we need you to save us! Your years of war will pay off, and you will be the most esteemed knight"
+              " of California!")
+        start_quest = (input("Will you save California (yes/no)? "))
+        if start_quest.lower().strip() == "yes":
+            print("Yay")
+        else:
+            print("I don't you could have done it either way, " + str(Player_name) + "! The demons are coming for you.")
+    elif Player_class.lower().strip() == "infant":
+        print("You don't seem to remember anything.")
+        print("A wizard suddenly appears!")
+        print("")
+        print("Oh, majestic knight of California! I have finally found you! Beasts have invaded the castle of the king,"
+              " and we need you to save us! Your years of war will pay off, and you will be the most esteemed knight"
+              " of California!")
+        start_quest = (input("Will you save California (yes/no)? "))
+        if start_quest.lower().strip() == "yes":
+            print("I'm surprised.. you can talk.")
+        else:
+            print("Honestly, I really don't mind. I don't see what you could have done either way.")
+            exit()
+
+def KNIGHT_STATS():
+  K_STATS = {Health:100, Armor:25, Gold:50, Evade:0}
+  KNIGHT_attack = random.randint(5, 11)
+  return KNIGHT_STATS(K_STATS)
+
+
+if __name__ == '__main__':
+    main()
