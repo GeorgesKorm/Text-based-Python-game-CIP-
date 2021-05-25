@@ -1,8 +1,30 @@
 import random
 
 
+# TODO:
+# Change dialogue to fit for each character
+# Define different starting stats for each class (Attack, defense, block, evade, gold and dot(for the dragon)) 
+# Create monsters and boss and their stats. 
+# Create combat! (Attack, defense, block, evade, health potion(only if player has one)) 
+# Attack values are between 2 numbers. A bit like rolling the dice. 
+# Defense is a percentage based reduction. 5 defense = 5% less damage taken
+# Block is -50% any attacks. Sometimes, blocking can lead to a 100% damage reduction (critical block). I'll do this choosing a random number between 1 and 5, and
+# ... if random.int falls on that number, it'll do a critical block
+# Same thing for critical attacks. Critical attacks should be attack_value * 2. It'll be a random number between 1 and 15 for normal classes, and 1 and 10 for the rogue.
+# ... if random.int falls on that random number, it'll do a critical attack. 
+# Create different paths, which leads to different rewards at the end of each battle.
+# Create shop after every battle. Maybe every 2 battles and 1 before the final boss. 
+# Import time for print statements, to make them quicker/faster
+# Add dialogue for monsters
+# Add \n (newlines) instead of empty print statements. Also add it to longer dialogues 
+# Make the game open in a new window instead of staying on PyCharm. 
+# Maybe use a while True: loop to give the player the option to quit the game?
+
+
+
 def main():
     welcome_script()
+
 
 def welcome_script():
     print("Welcome to the game")
@@ -51,7 +73,7 @@ def welcome_script():
             print("Yay")
         else:
             print("Wow!  " + str(Player_name) + ", you are the first merchant I meet who would deny more power. "
-                                                 "What would your family think of this?")
+                                                "What would your family think of this?")
             exit()
     elif Player_class.lower().strip() == "dragon warrior":
         print("Memories suddenly rush back to your head. You remember now! "
@@ -95,10 +117,11 @@ def welcome_script():
             print("Honestly, I really don't mind. I don't see what you could have done either way.")
             exit()
 
-def KNIGHT_STATS():
-  K_STATS = {Health:100, Armor:25, Gold:50, Evade:0}
-  KNIGHT_attack = random.randint(5, 11)
-  return KNIGHT_STATS(K_STATS)
+
+#def KNIGHT_STATS():
+ #   K_STATS = {Health: 100, Armor: 25, Gold: 50, Evade: 0}
+  #  KNIGHT_attack = random.randint(5, 11)
+   # return KNIGHT_STATS(K_STATS)
 
 
 if __name__ == '__main__':
