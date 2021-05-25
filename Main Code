@@ -22,9 +22,11 @@ import random
 
 
 
+import random
+
+
 def main():
     welcome_script()
-
 
 def welcome_script():
     print("Welcome to the game")
@@ -73,7 +75,7 @@ def welcome_script():
             print("Yay")
         else:
             print("Wow!  " + str(Player_name) + ", you are the first merchant I meet who would deny more power. "
-                                                "What would your family think of this?")
+                                                 "What would your family think of this?")
             exit()
     elif Player_class.lower().strip() == "dragon warrior":
         print("Memories suddenly rush back to your head. You remember now! "
@@ -116,13 +118,16 @@ def welcome_script():
         else:
             print("Honestly, I really don't mind. I don't see what you could have done either way.")
             exit()
-
+    else:
+        print("You keep your eyes closed, thinking that this is a dream")
+        print("Game over")
 
 #def KNIGHT_STATS():
- #   K_STATS = {Health: 100, Armor: 25, Gold: 50, Evade: 0}
-  #  KNIGHT_attack = random.randint(5, 11)
-   # return KNIGHT_STATS(K_STATS)
+ # K_STATS = {Health:100, Armor:25, Gold:50, Evade:0}
+  #KNIGHT_attack = random.randint(5, 11)
+  #return KNIGHT_STATS(K_STATS)
 
 
 if __name__ == '__main__':
     main()
+
