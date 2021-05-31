@@ -1,0 +1,115 @@
+import random
+
+#These are the playable characters and their stats
+
+class knight(object):
+    player_health = 100
+    player_attack = random.randint(8, 15)
+    player_crit = random.randint(0, 15) 
+    if player_crit == 5:
+        player_attack = player_attack * 3
+    player_armor = 25
+    player_evade = 0
+    player_gold = 50
+
+
+class rogue(object):
+    player_health = 70
+    player_attack = random.randint(3, 25)
+    player_crit = random.randint(0, 15)
+    if player_crit <= 5:
+        player_attack = player_attack * 3
+    player_armor = 5
+    player_evade = 30
+    player_gold = 85
+
+class merchant(object):
+    player_health = 70
+    player_attack = random.randint(5, 12)
+    player_crit = random.randint(0, 15)
+    if player_crit <= 3:
+        player_attack = player_attack * 2
+    player_armor = 10
+    player_evade = 10
+    player_gold = 100
+
+class infant(object):
+    player_health = 25
+    player_attack = random.randint(2, 5)
+    player_crit = random.randint(0, 15)
+    if player_crit == 1:
+        player_attack = player_attack * 5
+    player_armor = 0
+    player_evade = 50
+    player_gold = 0 
+
+#These will be the foes the hero will have to defeat
+
+class dog(object):
+    dog_name = "Snarling dog"
+    dog_health = 25
+    dog_attack = random.randint(2, 8)
+    dog_crit = random.randint(0, 30)
+    if dog_crit == 5:
+        dog_attack = dog_attack * 2
+    dog_armor = 0
+    dog_evade = 10
+    dog_gold = 0 
+
+class goblin(object):
+    goblin_name = "Greedy goblin"
+    goblin_health = 45
+    goblin_attack = random.randint(3, 7)
+    goblin_crit = random.randint(0, 25)
+    if goblin_crit <= 3:
+        goblin_attack = goblin_attack * 2
+    goblin_armor = 5
+    goblin_evade = 5
+    goblin_gold = 0
+
+class skeleton(object):
+    skeleton_name = "Angry skeleton"
+    skeleton_health = 60
+    skeleton_attack = random.randint(5, 13)
+    skeleton_crit = random.randint(0, 25)
+    if skeleton_crit <= 4:
+        skeleton_attack = skeleton_attack * 2
+    skeleton_armor = 10
+    skeleton_evade = 7
+    skeleton_gold = 0 
+
+
+class dragon(object):
+    dragon_name = "Dragon of Oblivion"
+    dragon_health = 100
+    dragon_attack = random.randint(10, 20)
+    dragon_crit = random.randint(0, 25)
+    if dragon_crit <= 5:
+        dragon_attack = dragon_attack * 2
+    dragon_armor = 20
+    dragon_evade = 0
+    dragon_gold = 100
+
+
+
+class demon(object):
+    demon_name = "Demon of Hatred"
+    demon_health = 120
+    demon_attack = random.randint(15, 20)
+    demon_crit = random.randint(0, 25)
+    if demon_crit == 0:
+        demon_attack = demon_attack * 2
+    demon_armor = 15
+    demon_evade = 10
+    demon_gold = 0 
+
+class boss(object):
+    boss_name = "The Wizard"
+    boss_health = 200
+    boss_attack = random.randint(19, 35)
+    boss_crit = random.randint(0, 100)
+    if boss_crit == 5:
+        boss_attack = boss_attack * 2
+    boss_armor = 5
+    boss_evade = 15
+    boss_gold = 1000
